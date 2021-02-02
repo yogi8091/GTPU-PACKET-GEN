@@ -1,0 +1,22 @@
+
+Topology
+================================================
+
+LEFT_NS (veth0) ------ (veth1) RIGHT_NS
+
+STEPS
+================================================
+
+1. 
+Execute the python script LEFT_NS
+-----------------------------------------------
+python3.6 GTPU_PktGen_ExtnHeader.py
+.....
+Sent 5 packets.
+dd#
+
+2.
+Capture Packet tcpdump script RIGHT_NS
+----------------------------------------------
+tcpdump -i veth1 port 2152 /home/yogeshp/GTP-TRF-GEN/GTPU-With-ExtnHeader_Sample2.pcap
+
